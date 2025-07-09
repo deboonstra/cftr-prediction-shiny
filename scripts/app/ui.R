@@ -43,7 +43,7 @@ ui <- function() {
         inputId = "dx",
         label = "What CF-related conditions do the patients have?",
         choices = dx_choices,
-        selected = "all",
+        selected = NULL,
         multiple = TRUE
       ),
 

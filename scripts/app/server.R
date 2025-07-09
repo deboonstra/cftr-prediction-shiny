@@ -109,7 +109,10 @@ server <- function(input, output) {
       } else {
         out <- data.frame(
           matrix(
-            data = "",
+            data = c(
+              "No CF-related Conditions Selected",
+              rep(x = "", times = 5)
+            ),
             nrow = 1,
             ncol = 6,
             dimnames = list(NULL, letters[1:6])
