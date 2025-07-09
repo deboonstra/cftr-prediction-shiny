@@ -1,5 +1,7 @@
 ui <- function() {
+  # Loading UI data ###
   load(file = here::here("data/app/ui.rda"))
+
   # UI ####
   shiny::pageWithSidebar(
     headerPanel = shiny::headerPanel(

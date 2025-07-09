@@ -1,11 +1,6 @@
-# Load shiny package
+# Load shiny and here package ####
 library(shiny)
 library(here)
-
-
-# Importing data ####
-load(file = here::here("data/app/ui.rda"))
-load(file = here::here("data/app/server.rda"))
 
 # Load UI and server functions ####
 source(

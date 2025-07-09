@@ -1,6 +1,9 @@
 server <- function(input, output) {
   output$view <- shiny::renderTable(
     expr = {
+      # Loading server data ###
+      load(file = here::here("data/app/server.rda"))
+
       # Switching input intersect to logical ####
       if (input$calc == "union") {
         intersect_value <- FALSE
