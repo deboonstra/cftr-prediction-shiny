@@ -11,6 +11,24 @@ ui <- function() {
       )
     ),
     sidebarPanel = shiny::sidebarPanel(
+      # Input for diagnoses ####
+      shiny::selectInput(
+        inputId = "dx",
+        label = "What CF-related conditions do the patients have?",
+        choices = dx_choices,
+        selected = NULL,
+        multiple = TRUE
+      ),
+
+      # Input for calculation of prevalence ####
+      shiny::selectInput(
+        inputId = "calc",
+        label = "How should the prevalence be calculated?",
+        choices = calc_choices,
+        selected = "individual",
+        multiple = FALSE
+      ),
+
       # Input for sex ####
       shiny::selectInput(
         inputId = "sex",
@@ -27,24 +45,6 @@ ui <- function() {
         choices = age_choices,
         selected = "Age not specified",
         multiple = FALSE
-      ),
-
-      # Input for calculation of prevalence ####
-      shiny::selectInput(
-        inputId = "calc",
-        label = "How should the prevalence be calculated?",
-        choices = calc_choices,
-        selected = "individual",
-        multiple = FALSE
-      ),
-
-      # Input for diagnoses ####
-      shiny::selectInput(
-        inputId = "dx",
-        label = "What CF-related conditions do the patients have?",
-        choices = dx_choices,
-        selected = NULL,
-        multiple = TRUE
       ),
 
       # Input for multiple visits given a diagnosis
